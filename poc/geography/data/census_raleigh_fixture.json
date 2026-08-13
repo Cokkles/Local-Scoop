@@ -1,0 +1,9 @@
+{
+  "result": {
+    "geographies": {
+      "States": [{"GEOID": "37", "NAME": "North Carolina", "STATE": "37"}],
+      "Counties": [{"GEOID": "37183", "NAME": "Wake County", "BASENAME": "Wake", "STATE": "37", "COUNTY": "183"}],
+      "Incorporated Places": [{"GEOID": "3755000", "NAME": "Raleigh city", "BASENAME": "Raleigh", "STATE": "37", "PLACE": "55000"}]
+    }
+  }
+}

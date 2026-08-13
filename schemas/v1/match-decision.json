@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","required":["left_id","right_id","disposition","score"],"properties":{"left_id":{"type":"string"},"right_id":{"type":"string"},"disposition":{"type":"string"},"score":{"type":"number"}}}

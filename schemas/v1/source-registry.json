@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "generated_for_region",
+    "market",
+    "counties",
+    "sources"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "generated_for_region": {"type": "string", "pattern": "^geo1:"},
+    "market": {"type": "string", "minLength": 1},
+    "counties": {
+      "type": "array",
+      "minItems": 8,
+      "items": {
+        "type": "object",
+        "required": ["geoid", "name", "role"],
+        "properties": {
+          "geoid": {"type": "string", "pattern": "^[0-9]{5}$"},
+          "name": {"type": "string"},
+          "role": {"enum": ["home", "adjacent"]}
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "source_id", "name", "authority_tier", "publisher_type", "url", "adapter_family",
+          "ingestion_methods", "readiness", "access", "enabled_for_phase_0_5", "county_geoids",
+          "coverage_tags", "structure_score", "coverage_score", "maintenance_score", "cost_score", "notes"
+        ],
+        "properties": {
+          "source_id": {"type": "string", "minLength": 1},
+          "name": {"type": "string"},
+          "authority_tier": {"type": "integer", "minimum": 1, "maximum": 5},
+          "url": {"type": "string", "format": "uri"},
+          "readiness": {"enum": ["ready", "candidate", "requires_key", "licensed", "deferred"]},
+          "enabled_for_phase_0_5": {"type": "boolean"},
+          "county_geoids": {"type": "array", "minItems": 1},
+          "ingestion_methods": {"type": "array", "minItems": 1},
+          "structure_score": {"type": "integer", "minimum": 1, "maximum": 5},
+          "coverage_score": {"type": "integer", "minimum": 1, "maximum": 5},
+          "maintenance_score": {"type": "integer", "minimum": 1, "maximum": 5},
+          "cost_score": {"type": "integer", "minimum": 1, "maximum": 5}
+        }
+      }
+    }
+  }
+}

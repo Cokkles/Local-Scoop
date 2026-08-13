@@ -1,0 +1,8 @@
+County Name|County GEOID|Neighbor Name|Neighbor GEOID|Length
+Wake County, NC|37183|Chatham County, NC|37037|37524
+Wake County, NC|37183|Durham County, NC|37063|41318
+Wake County, NC|37183|Franklin County, NC|37069|41836
+Wake County, NC|37183|Granville County, NC|37077|19845
+Wake County, NC|37183|Harnett County, NC|37085|20104
+Wake County, NC|37183|Johnston County, NC|37101|53367
+Wake County, NC|37183|Nash County, NC|37127|0

@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "local-scoop-poc"
+version = "0.0.1"
+requires-python = ">=3.11"
+dependencies = ["jsonschema>=4.22,<5"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<9"]
+
+[tool.pytest.ini_options]
+testpaths = ["poc/contracts"]
+addopts = "-q"
